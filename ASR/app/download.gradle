@@ -1,0 +1,15 @@
+task downloadJLibrosa() {
+    download {
+        src 'https://github.com/Subtitle-Synchronizer/jlibrosa/raw/master/binaries/jlibrosa-1.1.8-SNAPSHOT-jar-with-dependencies.jar'
+        dest project.ext.LIB_DIR + 'jlibrosa-1.1.8-SNAPSHOT-jar-with-dependencies.jar'
+        overwrite false
+    }
+}
+
+task downloadCONFORMERModelFile() {
+    download {
+        src 'https://tfhub.dev/neso613/lite-model/ASR_TFLite/pre_trained_models/English/1?lite-format=tflite'
+        dest project.ext.ASSET_DIR + '/CONFORMER.tflite'
+        overwrite false
+    }
+}
